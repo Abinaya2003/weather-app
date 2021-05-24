@@ -3,7 +3,7 @@ let API_KEY = "d193673d634b460b9f297ea288516bfb";
 
 getWeatherdata = (city) => {
  const URL = "https://api.openweathermap.org/data/2.5/weather";
- const FULL_URL = `${URL}?q=${city}&appid=${API_KEY}&units=imperial`;
+ const FULL_URL = `${URL}?q=${city}&appid=${API_KEY}&units=metric`;
  const weatherPromise = fetch(FULL_URL);
   return weatherPromise.then((response) => {
    return response.json();
